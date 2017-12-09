@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # 利用 CarrierWave gem 來製作上傳功能
 gem 'carrierwave'
+# 假資料產生器 —— FFaker
+gem 'ffaker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
