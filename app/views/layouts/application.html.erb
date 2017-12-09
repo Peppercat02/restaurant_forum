@@ -9,18 +9,31 @@
 </head>
 
 <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <% if current_user %>
-    Hi, <%= current_user.email %>
-    <%= link_to('登出', destroy_user_session_path, method: :delete) %> |
-    <%= link_to('修改密碼', edit_user_registration_path) %>
-    <% else %>
-    <%= link_to('註冊', new_user_registration_path) %> |
-    <%= link_to('登入', new_user_session_path) %>
-    <% end %>
-
-    <%= yield %>
+    <nav class="navbar navbar-default navbar-fixed-top row">
+        <div class="col-sm-4 navbar-header">
+            <a class="navbar-brand" href="/">
+                <img alt="餐廳評論網" src="...">
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+        </div>
+        <div class="col-sm-4 pull-right ">
+            <% if current_user %>
+            Hi, <%= current_user.email %>
+            <%= link_to('登出', destroy_user_session_path, method: :delete, class: "btn btn-default") %>
+            <%= link_to('修改密碼', edit_user_registration_path, class: "btn btn-default") %>
+            <% else %>
+            <%= link_to('註冊', new_user_registration_path, class: "btn btn-default") %>
+            <%= link_to('登入', new_user_session_path, class: "btn btn-default") %>
+            <% end %>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+        <%= yield %>
+        </div>
+    </div>
 </body>
 </html>

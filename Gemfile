@@ -37,6 +37,12 @@ gem 'carrierwave'
 gem 'ffaker'
 # 使用 Kaminari 加入分頁功能
 gem 'kaminari'
+# 使用 Bootstrap 優化的前端體驗
+gem 'bootstrap-sass', '~> 3.3.7'
+# Bootstrap 的 JavaScript 使用了 jQuery 的函式庫
+gem 'jquery-rails'
+# Bootstrap Glyphicons
+gem 'glyphicons', '~> 1.0', '>= 1.0.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -46,6 +52,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -57,5 +64,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'pg'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
