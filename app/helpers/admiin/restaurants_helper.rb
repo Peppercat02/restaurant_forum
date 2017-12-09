@@ -1,0 +1,2 @@
+module Admiin::RestaurantsHelper
+end
