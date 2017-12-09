@@ -21,7 +21,7 @@ class Admin::RestaurantsController < ApplicationController
         end
     end
 
-    before_action :set_restaurant, only: [:show, :edit, :update]
+    before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
     #read restaurant records
     def show
     end
@@ -37,6 +37,12 @@ class Admin::RestaurantsController < ApplicationController
         render :edit
         flash[:alert] = "restaurant was failed to update"
       end
+    end
+    #delete a restaurant record
+    def destroy
+      @restaurant.destroy
+      redirect_to admin_restaurants_path
+      flash[:alert] = "restaurant was deleted"
     end
     # private function
     private
