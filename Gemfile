@@ -35,6 +35,8 @@ gem 'devise'
 gem 'carrierwave'
 # 假資料產生器 —— FFaker
 gem 'ffaker'
+# 使用 Kaminari 加入分頁功能
+gem 'kaminari'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

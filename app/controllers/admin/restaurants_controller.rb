@@ -26,7 +26,8 @@ class Admin::RestaurantsController < ApplicationController
     def show
     end
     #edit a restaurant record
-    def edit
+    def index
+      @restaurants = Restaurant.page(params[:page]).per(10)
     end
     #update a restaurant record
     def update
