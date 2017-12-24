@@ -3,6 +3,7 @@
     <thead>
       <tr>
         <th>#</th>
+        <th class="col-sm-2">Category</th>
         <th class="col-sm-2">Name</th>
         <th class="col-sm-2">Tel</th>
         <th class="col-sm-2">Opening Hours</th>
@@ -17,6 +18,7 @@
   <% @restaurants.each_with_index do |restaurant, index| %>
   <tr>
     <th scope="row"><%= restaurant.id %></th>
+    <td>[<%= restaurant.category.name %>]</td>
     <td><%= restaurant.name %></td>
     <td><%= restaurant.tel %></td>
     <td><%= restaurant.opening_hours %></td>
