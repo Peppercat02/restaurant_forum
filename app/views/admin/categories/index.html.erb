@@ -5,7 +5,6 @@
 <h1>餐廳分類總表</h1>
 
 <div class="row">
-
     <div class="col-md-12">
         <div class="form-inline createCatefory" >
             <%= form_for [:admin, @category] do |f| %>
@@ -24,6 +23,7 @@
                 <tr>
                     <th>#</th>
                     <th>Category Name</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +31,9 @@
                 <tr>
                     <th scope="row"><%= category.id %></th>
                     <td><%= category.name %></td>
+                    <td>
+                        <%= link_to 'Edit', admin_categories_path(id: category.id) %>
+                    </td>
                 </tr>
                 <% end %>
             </tbody>
