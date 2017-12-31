@@ -1,6 +1,4 @@
-class Admin::RestaurantsController < ApplicationController
-    before_action :authenticate_admin
-
+class Admin::RestaurantsController < Admin::BaseController
     def index
         @restaurants = Restaurant.all
     end
