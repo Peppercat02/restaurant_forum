@@ -35,6 +35,10 @@
                 <em><%= comment.created_at %> </em>
             </p>
         </div>
+        <!-- 只有管理員才能刪除 comments -->
+        <% if current_user.admin? %>
+          <%= link_to "Delete", restaurant_comment_path(@restaurant, comment), method: :delete %>
+        <% end %>
         <hr>
         <% end %>
         <%= form_for [@restaurant, @comment] do |f| %>
