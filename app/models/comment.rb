@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-    t.text :content
-    t.integer :restaurant_id
-    t.integer :user_id
+    validates_presence_of :content
+    belongs_to :user
+    belongs_to :restaurant
 end
