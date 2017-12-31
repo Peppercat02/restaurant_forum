@@ -28,9 +28,9 @@
                 </tr>
             </thead>
             <tbody>
-                <% @categories.each do |category| %>
+                <% @categories.each_with_index do |category, index| %>
                 <tr>
-                    <th scope="row"><%= category.id %></th>
+                    <th scope="row"><%= index+1 %></th>
                     <td><%= category.name %></td>
                     <td>
                         <%= link_to 'Edit', admin_categories_path(id: category.id) %>
