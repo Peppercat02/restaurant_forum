@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'followships/index'
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -21,7 +23,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update]
+  resources :followships, only: [:create, :destroy]
 
   resources :categories, only: :show
   root "restaurants#index"
