@@ -25,8 +25,32 @@
 }
 
 .my-restaurant {
-    max-width: 150px;
-    max-height: 130px;
-    float: left;
-    margin: 10px;
+  display: inline-block;
+  text-align: center;
+  padding: 7px 7px 0 7px;
+}
+
+.my-restaurant > div {
+  height: 60px;
+}
+
+.my-restaurant img {
+  max-height: 100%;
+}
+
+.panel a:hover .my-restaurant {
+  background-color: #eee;
+}
+
+.ranking-item {
+  margin-bottom: 15px;
+}
+
+.user-item {
+  margin-bottom: 15px;
+}
+
+.user-item img {
+  width: 128px;
+  height: 128px;
 }
